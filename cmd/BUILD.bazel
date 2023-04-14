@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_docker//go:image.bzl", "go_image")
+
+go_library(
+    name = "cmd_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/dev-hyunsang/golang-skaffold/cmd",
+    visibility = ["//visibility:private"],
+    deps = ["@com_github_gofiber_fiber_v2//:go_default_library"],
+)
+
+go_image(
+    name = "cmd",
+    embed = [":cmd_lib"],
+    visibility = ["//visibility:public"],
+)

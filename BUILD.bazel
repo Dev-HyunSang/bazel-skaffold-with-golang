@@ -1,0 +1,20 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_docker//go:image.bzl", "go_image")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:map_kind go_binary go_image @io_bazel_rules_docker//go:image.bzl
+# gazelle:prefix github.com/dev-hyunsang/golang-skaffold
+gazelle(name = "gazelle")
+
+go_library(
+    name = "golang-skaffold_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/dev-hyunsang/golang-skaffold",
+    visibility = ["//visibility:private"],
+)
+
+go_image(
+    name = "golang-skaffold",
+    embed = [":golang-skaffold_lib"],
+    visibility = ["//visibility:public"],
+)
