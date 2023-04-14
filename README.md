@@ -1,4 +1,4 @@
-# golang-skaffold
+# bazel-skaffold-with-golang
 - 2023.04.14 - 팀그릿 백엔드팀에서 진행한 Bazel(Gazelle) + Skaffold(Kubernetes) 스터디입니다.
 - 지식을 공유해 주신 주찬님! 감사합니다 :)
 
