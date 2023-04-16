@@ -1,6 +1,6 @@
 # bazel-skaffold-with-golang
 - 2023.04.14 - 팀그릿 백엔드팀에서 진행한 Bazel(Gazelle) + Skaffold(Kubernetes) 스터디입니다.
-- 지식을 공유해 주신 주찬님! 감사합니다 :)
+- 지식을 공유해 주신 주찬님! 감사합니다 :) 팀그릿 내부에서 사용할 파이프라인을 개발하고 있습니다. 추후에 발표도 진행해 볼 예정입니다.
 
 ## Bazel Build
 ```bash
